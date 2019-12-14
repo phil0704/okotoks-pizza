@@ -1,0 +1,70 @@
+/* my grid okotoks reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+}
+/* main style*/
+
+h1,
+img,
+nav,
+article,
+footer {
+  padding: 1em;
+}
+
+/*lets see how is it cool!*/
+
+#grid-container {
+  display: inline;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: auto;
+  grid-template-areas:
+  "logo image_fb image_insta image_twitter image_tphone"
+  "navigation navigation navigation navigation navigation navigation"
+  "content content"
+  "footer footer"
+}
+.okotoks-pizza {
+  display: flex;
+  flex-wrap: wrap;
+
+}
+#logo {
+  background-color: brown;
+  grid-column-start: 'logo';
+  grid-template-columns: auto;
+
+}
+#navigation {
+  display: flex;
+  align-content: space-between;
+  width: 100%;
+  background-color: yellow;
+  grid-column-start: 'navigation';
+  grid-template: none;
+  grid-column-end: span 6;
+
+}
+#navigation a {
+  text-align: center;
+  display: block;
+  width: calc( 100% / 6 );
+}
+#content {
+  text-align: center;
+  font-family: fantasy;
+  font-size: 25px;
+  height: 200px;
+  background-color: blue;
+  grid-column-start: 'content';
+  grid-auto-columns: auto;
+  grid-column-end: span 2;
+}
+#footer {
+  background-color: green;
+  grid-column-start: 'footer';
+  grid-column-end: span 2;
+}
