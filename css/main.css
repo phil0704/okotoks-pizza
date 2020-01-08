@@ -17,32 +17,30 @@ footer {
 
 /*lets see how is it cool!*/
 
+body {
+  background-color: #eee;
+}
 #grid-container {
   display: inline;
-  grid-template-columns: 25% 25% 25% 25%;
-  grid-template-rows: auto;
-  grid-template-areas:
-  "logo image_fb image_insta image_twitter image_tphone"
-  "navigation navigation navigation navigation navigation navigation"
-  "content content"
-  "footer footer"
+  text-align: center;
+  font-family: monospace;
+  font-style: italic;
+  font-size: 25px;
+  height: 10px;
 }
 .okotoks-pizza {
   display: flex;
   flex-wrap: wrap;
-
-}
-#logo {
-  background-color: brown;
-  grid-column-start: 'logo';
+  grid-column-start: left;
   grid-template-columns: auto;
 
 }
+
 #navigation {
   display: flex;
   align-content: space-between;
   width: 100%;
-  background-color: yellow;
+  background-color: coral;
   grid-column-start: 'navigation';
   grid-template: none;
   grid-column-end: span 6;
@@ -51,19 +49,25 @@ footer {
 #navigation a {
   text-align: center;
   display: block;
+  text-decoration: none;
   width: calc( 100% / 6 );
+}
+#navigation a:hover {
+  color: red;
 }
 #content {
   text-align: center;
   font-family: fantasy;
-  font-size: 25px;
-  height: 200px;
-  background-color: blue;
-  grid-column-start: 'content';
-  grid-auto-columns: auto;
+  font-size: 35px;
+  height: 900px;
   grid-column-end: span 2;
+  text-align: right;
+  background-image: url("../img/wall-table.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 #footer {
+  height: 80px;
   background-color: green;
   grid-column-start: 'footer';
   grid-column-end: span 2;
