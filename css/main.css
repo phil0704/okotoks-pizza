@@ -1,4 +1,3 @@
-/* my grid okotoks reset */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -18,7 +17,14 @@ footer {
 /*lets see how is it cool!*/
 
 body {
-  background-color: #eee;
+  background-color: #faf0e6;
+}
+.okotoks-pizza {
+  font-size: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  grid-column-start: left;
+  grid-template-columns: auto;
 }
 #grid-container {
   display: inline;
@@ -28,33 +34,41 @@ body {
   font-size: 25px;
   height: 10px;
 }
-.okotoks-pizza {
-  display: flex;
-  flex-wrap: wrap;
-  grid-column-start: left;
-  grid-template-columns: auto;
-
-}
-
 #navigation {
+  overflow-x: auto;
   display: flex;
   align-content: space-between;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
   width: 100%;
   background-color: coral;
   grid-column-start: 'navigation';
   grid-template: none;
   grid-column-end: span 6;
-
 }
 #navigation a {
   text-align: center;
   display: block;
   text-decoration: none;
-  width: calc( 100% / 6 );
+  /* width: calc( 100% / 6 ); */
 }
 #navigation a:hover {
   color: red;
 }
+.wrapper {
+  background-color: orangered;
+  display: flex; flex-wrap: wrap;
+  flex-direction: row;
+}
+.non-wrapper {
+
+}
+.action1, .action2 {
+  font-size: 25px;
+  text-align: left;
+}
+
 #content {
   text-align: center;
   font-family: fantasy;
@@ -66,9 +80,62 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
+.showcase {
+  width: 100%;
+  text-align: center;
+}
+.menu-item1, .menu-item3, .menu-item5 {
+  text-align: center;
+  width: 50%;
+}
+.wrapper img {
+  height: 200px;
+  width: auto;
+}
+.menu-item2, .menu-item4, .menu-item6 {
+  text-align: center;
+  width: 50%;
+}
+.main-type1, .main-type2 {
+  font-family: monospace;
+  font-size: 25px;
+}
+.selection1, .selection2 p {
+  font-family: Arial Helvetica sans-serif;
+  display: inline;
+}
+.top-wrapper {
+  text-align: center;
+  font-size: 25px;
+
+}
+.deal-wrapper1, .deal-wrapper3 {
+  font-size: 25px;
+  text-align: right;
+  display: inline-block;
+  width: 65%;
+}
+.deal-wrapper2, .deal-wrapper4 {
+  font-size: 25px;
+  text-align: left;
+  display: inline-block;
+  width: 65%;
+}
+.non-wrapper img {
+  width: 80%;
+  height: auto;
+}
 #footer {
+  text-align: center;
   height: 80px;
   background-color: green;
   grid-column-start: 'footer';
   grid-column-end: span 2;
+}
+@media only screen and (min-width: 1000px) {
+  #content {
+    margin: 0;
+    text-align: left;
+
+  }
 }
