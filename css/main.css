@@ -14,7 +14,7 @@ footer {
   padding: 1em;
 }
 
-/*lets see how is it cool!*/
+/* Basic Styling Project! */
 
 body {
   background-color: #faf0e6;
@@ -61,25 +61,50 @@ body {
   display: flex; flex-wrap: wrap;
   flex-direction: row;
 }
-.non-wrapper {
-
-}
-.action1, .action2 {
-  font-size: 25px;
-  text-align: left;
-}
-
 #content {
   text-align: center;
   font-family: fantasy;
   font-size: 35px;
-  height: 900px;
+  height: auto;
   grid-column-end: span 2;
-  text-align: right;
   background-image: url("../img/wall-table.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
+#content img {
+  max-width: 100%;
+}
+.non-wrapper img {
+  width: 80%;
+  height: auto;
+}
+#newsletter {
+  padding: 25px;
+  height: auto;
+  width: 100%;
+  color: #ffffff;
+  background: #35424a;
+}
+#newsletter h1 {
+  float: left;
+}
+#newsletter input[type="email"] {
+  padding: 10px;
+  height: 20px;
+  width: 250px;
+}
+#footer {
+  text-align: center;
+  height: 80px;
+  background-color: green;
+  grid-column-start: 'footer';
+  grid-column-end: span 2;
+}
+/* locations */
+iframe {
+  width: 100%;
+}
+/* Menu */
 .showcase {
   width: 100%;
   text-align: center;
@@ -100,14 +125,19 @@ body {
   font-family: monospace;
   font-size: 25px;
 }
+/* About */
 .selection1, .selection2 p {
   font-family: Arial Helvetica sans-serif;
   display: inline;
 }
+/* promotions */
 .top-wrapper {
   text-align: center;
   font-size: 25px;
-
+}
+.action1, .action2 {
+  font-size: 25px;
+  text-align: left;
 }
 .deal-wrapper1, .deal-wrapper3 {
   font-size: 25px;
@@ -121,21 +151,14 @@ body {
   display: inline-block;
   width: 65%;
 }
-.non-wrapper img {
-  width: 80%;
-  height: auto;
-}
-#footer {
-  text-align: center;
-  height: 80px;
-  background-color: green;
-  grid-column-start: 'footer';
-  grid-column-end: span 2;
-}
-@media only screen and (min-width: 1000px) {
-  #content {
-    margin: 0;
-    text-align: left;
+/* rewards */
+.rewards {
+  width: 100%;
+  display: block;
 
-  }
+}
+/* Media Queries */
+
+@@media (min-width: 768px) {
+
 }
